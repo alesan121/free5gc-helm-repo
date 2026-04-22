@@ -1,0 +1,120 @@
+apiVersion: v1
+entries:
+  free5gc:
+  - apiVersion: v2
+    appVersion: v4.2.0
+    created: "2026-04-22T12:13:55.588608+02:00"
+    dependencies:
+    - condition: deployMongoDb
+      name: mongodb
+      repository: ""
+    - condition: deployAmf
+      name: free5gc-amf
+      repository: ""
+    - condition: deployAusf
+      name: free5gc-ausf
+      repository: ""
+    - condition: deployChf
+      name: free5gc-chf
+      repository: ""
+    - condition: deployN3iwf
+      name: free5gc-n3iwf
+      repository: ""
+    - condition: deployNef
+      name: free5gc-nef
+      repository: ""
+    - condition: deployNrf
+      name: free5gc-nrf
+      repository: ""
+    - condition: deployNssf
+      name: free5gc-nssf
+      repository: ""
+    - condition: deployPcf
+      name: free5gc-pcf
+      repository: ""
+    - condition: deploySmf
+      name: free5gc-smf
+      repository: ""
+    - condition: deployUdm
+      name: free5gc-udm
+      repository: ""
+    - condition: deployUdr
+      name: free5gc-udr
+      repository: ""
+    - condition: deployUpf
+      name: free5gc-upf
+      repository: ""
+    - condition: deployWebui
+      name: free5gc-webui
+      repository: ""
+    - condition: deployDbPython
+      name: free5gc-dbpython
+      repository: ""
+    description: A Helm chart to deploy Free5gc
+    digest: 91d1e867ddfabe3ea0cc0868dbb9fd2f918e7621ed6fb39a13a51e4d5b993c98
+    icon: https://camo.githubusercontent.com/915dcf8299b3d2bfe2b2693c5401916cb31e31fb690a73e7da327808000efa37/68747470733a2f2f666f72756d2e667265653567632e6f72672f75706c6f6164732f64656661756c742f6f726967696e616c2f31582f333234363935626663363438316264353536633131303138663238333430383663663565633634352e706e67
+    maintainers:
+    - email: abderaouf.khichane@orange.com
+      name: Abderaouf KHICHANE
+    - email: ilhem.fajjari@orange.com
+      name: Ilhem FAJJARI
+    - email: ayoub.bousselmi@orange.com
+      name: Ayoub BOUSSELMI
+    name: free5gc
+    urls:
+    - https://alesan121.github.io/free5gc-helm-repo/free5gc-4.2.0.tgz
+    version: 4.2.0
+  loxilb:
+  - apiVersion: v2
+    appVersion: v4.2.0
+    created: "2026-04-22T12:13:55.588838+02:00"
+    description: A Helm chart for LoxiLB - an open-source, eBPF-based load balancer
+      for NGAP Layer 7 load balancing within 5G networks
+    digest: bbe22b16845ca09241997693baf1374492de9ca8179ca63d301207d292d1a53b
+    home: https://github.com/loxilb-io/loxilb
+    keywords:
+    - loxilb
+    - loadbalancer
+    - 5g
+    - ngap
+    - ebpf
+    maintainers:
+    - email: wlin.cs13@nycu.edu.tw
+      name: William Lin
+    name: loxilb
+    sources:
+    - https://github.com/loxilb-io/loxilb
+    type: application
+    urls:
+    - https://alesan121.github.io/free5gc-helm-repo/loxilb-4.2.0.tgz
+    version: 4.2.0
+  packetrusher:
+  - apiVersion: v2
+    appVersion: v4.2.0
+    created: "2026-04-22T12:13:55.589017+02:00"
+    description: A Helm chart to deploy the Packet Rusher
+    digest: f09acb60fff9bd4c184c0783fdf84f7db1b2df46f43ddfee3904223d6a59fe39
+    icon: https://camo.githubusercontent.com/915dcf8299b3d2bfe2b2693c5401916cb31e31fb690a73e7da327808000efa37/68747470733a2f2f666f72756d2e667265653567632e6f72672f75706c6f6164732f64656661756c742f6f726967696e616c2f31582f333234363935626663363438316264353536633131303138663238333430383663663565633634352e706e67
+    maintainers:
+    - email: ny40ny40ny.cs11@nycu.edu.tw
+      name: Brian Chen
+    name: packetrusher
+    type: application
+    urls:
+    - https://alesan121.github.io/free5gc-helm-repo/packetrusher-4.2.0.tgz
+    version: 4.2.0
+  ueransim:
+  - apiVersion: v2
+    appVersion: v4.2.0
+    created: "2026-04-22T12:13:55.589345+02:00"
+    description: A Helm chart to deploy UERANSIM
+    digest: c275a7c8b95866cffc23e85e4dd253cd7b963bb01ea95d7cbb248b72582382e7
+    icon: https://raw.githubusercontent.com/aligungr/UERANSIM/master/.github/logo.png
+    maintainers:
+    - email: abderaouf.khichane@orange.com
+      name: Abderaouf KHICHANE
+    name: ueransim
+    urls:
+    - https://alesan121.github.io/free5gc-helm-repo/ueransim-4.2.0.tgz
+    version: 4.2.0
+generated: "2026-04-22T12:13:55.56899+02:00"
