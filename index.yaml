@@ -3,7 +3,7 @@ entries:
   free5gc:
   - apiVersion: v2
     appVersion: v4.2.0
-    created: "2026-04-22T13:14:37.592327+02:00"
+    created: "2026-04-22T13:20:14.20684+02:00"
     dependencies:
     - condition: deployMongoDb
       name: mongodb
@@ -67,26 +67,25 @@ entries:
   free5gc-upf:
   - apiVersion: v2
     appVersion: 4.2.0
-    created: "2026-04-22T13:14:37.592887+02:00"
-    description: A Helm chart to deploy the Free5GC User Plane
-    digest: f742739d278d8c03b0cc1385517c9bc2399f9ad55c214e39124d10bc8c27c586
-    icon: https://camo.githubusercontent.com/915dcf8299b3d2bfe2b2693c5401916cb31e31fb690a73e7da327808000efa37/68747470733a2f2f666f72756d2e667265653567632e6f72672f75706c6f6164732f64656661756c742f6f726967696e616c2f31582f333234363935626663363438316264353536633131303138663238333430383663663565633634352e706e67
+    created: "2026-04-22T13:20:14.207499+02:00"
+    description: A Helm chart to deploy Free5GC UPF (User Plane Function) standalone
+    digest: 285218283e68c0a55b24eeabf250eb88f650524ea92473a790ad6142462119a2
+    keywords:
+    - free5gc
+    - 5g
+    - uPF
+    - user plane
     maintainers:
-    - email: abderaouf.khichane@orange.com
-      name: Abderaouf KHICHANE
-    - email: ilhem.fajjari@orange.com
-      name: Ilhem FAJJARI
-    - email: ayoub.bousselmi@orange.com
-      name: Ayoub BOUSSELMI
+    - email: osm@osm.etsi.org
+      name: OSM
     name: free5gc-upf
-    type: application
     urls:
-    - https://alesan121.github.io/free5gc-helm-repo/free5gc-upf-4.2.0-upf1.tgz
-    version: 4.2.0-upf1
+    - https://alesan121.github.io/free5gc-helm-repo/free5gc-upf-4.2.0-upf.tgz
+    version: 4.2.0-upf
   loxilb:
   - apiVersion: v2
     appVersion: v4.2.0
-    created: "2026-04-22T13:14:37.593259+02:00"
+    created: "2026-04-22T13:20:14.208371+02:00"
     description: A Helm chart for LoxiLB - an open-source, eBPF-based load balancer
       for NGAP Layer 7 load balancing within 5G networks
     digest: bbe22b16845ca09241997693baf1374492de9ca8179ca63d301207d292d1a53b
@@ -110,7 +109,7 @@ entries:
   packetrusher:
   - apiVersion: v2
     appVersion: v4.2.0
-    created: "2026-04-22T13:14:37.593634+02:00"
+    created: "2026-04-22T13:20:14.208733+02:00"
     description: A Helm chart to deploy the Packet Rusher
     digest: f09acb60fff9bd4c184c0783fdf84f7db1b2df46f43ddfee3904223d6a59fe39
     icon: https://camo.githubusercontent.com/915dcf8299b3d2bfe2b2693c5401916cb31e31fb690a73e7da327808000efa37/68747470733a2f2f666f72756d2e667265653567632e6f72672f75706c6f6164732f64656661756c742f6f726967696e616c2f31582f333234363935626663363438316264353536633131303138663238333430383663663565633634352e706e67
@@ -125,7 +124,7 @@ entries:
   ueransim:
   - apiVersion: v2
     appVersion: v4.2.0
-    created: "2026-04-22T13:14:37.594798+02:00"
+    created: "2026-04-22T13:20:14.209622+02:00"
     description: A Helm chart to deploy UERANSIM
     digest: c275a7c8b95866cffc23e85e4dd253cd7b963bb01ea95d7cbb248b72582382e7
     icon: https://raw.githubusercontent.com/aligungr/UERANSIM/master/.github/logo.png
@@ -136,4 +135,4 @@ entries:
     urls:
     - https://alesan121.github.io/free5gc-helm-repo/ueransim-4.2.0.tgz
     version: 4.2.0
-generated: "2026-04-22T13:14:37.570728+02:00"
+generated: "2026-04-22T13:20:14.184362+02:00"
