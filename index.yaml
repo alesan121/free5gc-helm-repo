@@ -3,7 +3,7 @@ entries:
   free5gc:
   - apiVersion: v2
     appVersion: v4.2.0
-    created: "2026-04-22T13:22:18.325975+02:00"
+    created: "2026-04-22T13:23:38.988357+02:00"
     dependencies:
     - condition: deployMongoDb
       name: mongodb
@@ -67,7 +67,7 @@ entries:
   free5gc-upf:
   - apiVersion: v2
     appVersion: 4.2.0
-    created: "2026-04-22T13:22:18.32656+02:00"
+    created: "2026-04-22T13:23:38.98897+02:00"
     description: A Helm chart to deploy Free5GC UPF (User Plane Function) standalone
     digest: 5c2e39dda511393e76d88dd3a9a0f23745f21f15e23a91c1d2f74661d8606585
     keywords:
@@ -85,7 +85,7 @@ entries:
   loxilb:
   - apiVersion: v2
     appVersion: v4.2.0
-    created: "2026-04-22T13:22:18.327157+02:00"
+    created: "2026-04-22T13:23:38.989223+02:00"
     description: A Helm chart for LoxiLB - an open-source, eBPF-based load balancer
       for NGAP Layer 7 load balancing within 5G networks
     digest: bbe22b16845ca09241997693baf1374492de9ca8179ca63d301207d292d1a53b
@@ -109,7 +109,7 @@ entries:
   packetrusher:
   - apiVersion: v2
     appVersion: v4.2.0
-    created: "2026-04-22T13:22:18.327433+02:00"
+    created: "2026-04-22T13:23:38.989409+02:00"
     description: A Helm chart to deploy the Packet Rusher
     digest: f09acb60fff9bd4c184c0783fdf84f7db1b2df46f43ddfee3904223d6a59fe39
     icon: https://camo.githubusercontent.com/915dcf8299b3d2bfe2b2693c5401916cb31e31fb690a73e7da327808000efa37/68747470733a2f2f666f72756d2e667265653567632e6f72672f75706c6f6164732f64656661756c742f6f726967696e616c2f31582f333234363935626663363438316264353536633131303138663238333430383663663565633634352e706e67
@@ -124,7 +124,7 @@ entries:
   ueransim:
   - apiVersion: v2
     appVersion: v4.2.0
-    created: "2026-04-22T13:22:18.327892+02:00"
+    created: "2026-04-22T13:23:38.989785+02:00"
     description: A Helm chart to deploy UERANSIM
     digest: c275a7c8b95866cffc23e85e4dd253cd7b963bb01ea95d7cbb248b72582382e7
     icon: https://raw.githubusercontent.com/aligungr/UERANSIM/master/.github/logo.png
@@ -135,4 +135,4 @@ entries:
     urls:
     - https://alesan121.github.io/free5gc-helm-repo/ueransim-4.2.0.tgz
     version: 4.2.0
-generated: "2026-04-22T13:22:18.301727+02:00"
+generated: "2026-04-22T13:23:38.969489+02:00"
