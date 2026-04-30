@@ -175,7 +175,7 @@ entries:
     name: oai-5g-core
     type: application
     urls:
-    - oai-5g-core-v2.2.0.tgz
+    - https://alesan121.github.io/free5gc-helm-repo/oai-5g-core-v2.2.0.tgz
     version: v2.2.0
   packetrusher:
   - apiVersion: v2
