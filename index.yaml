@@ -3,7 +3,7 @@ entries:
   free5gc:
   - apiVersion: v2
     appVersion: v4.2.0
-    created: "2026-04-22T13:30:39.90226+02:00"
+    created: "2026-04-30T13:35:19.035993+02:00"
     dependencies:
     - condition: deployMongoDb
       name: mongodb
@@ -62,12 +62,12 @@ entries:
       name: Ayoub BOUSSELMI
     name: free5gc
     urls:
-    - https://alesan121.github.io/free5gc-helm-repo/free5gc-4.2.0.tgz
+    - free5gc-4.2.0.tgz
     version: 4.2.0
   free5gc-upf:
   - apiVersion: v2
     appVersion: v4.2.0
-    created: "2026-04-22T13:30:39.903214+02:00"
+    created: "2026-04-30T13:35:19.037194+02:00"
     description: A Helm chart to deploy Free5GC UPF (User Plane Function) standalone
     digest: be14114961a59d2fc55e3f9363b93acdabaaa4d64fb0736f7b5b252e21174a41
     keywords:
@@ -80,12 +80,12 @@ entries:
       name: OSM
     name: free5gc-upf
     urls:
-    - https://alesan121.github.io/free5gc-helm-repo/free5gc-upf-4.2.0.tgz
+    - free5gc-upf-4.2.0.tgz
     version: 4.2.0
   loxilb:
   - apiVersion: v2
     appVersion: v4.2.0
-    created: "2026-04-22T13:30:39.903454+02:00"
+    created: "2026-04-30T13:35:19.037802+02:00"
     description: A Helm chart for LoxiLB - an open-source, eBPF-based load balancer
       for NGAP Layer 7 load balancing within 5G networks
     digest: bbe22b16845ca09241997693baf1374492de9ca8179ca63d301207d292d1a53b
@@ -104,12 +104,83 @@ entries:
     - https://github.com/loxilb-io/loxilb
     type: application
     urls:
-    - https://alesan121.github.io/free5gc-helm-repo/loxilb-4.2.0.tgz
+    - loxilb-4.2.0.tgz
     version: 4.2.0
+  oai-5g-core:
+  - apiVersion: v2
+    appVersion: v2.2.1
+    created: "2026-04-30T13:35:19.042083+02:00"
+    dependencies:
+    - condition: mysql.enabled
+      name: mysql
+      repository: file://../mysql
+      version: 9.0.1
+    - condition: oai-nrf.enabled
+      name: oai-nrf
+      repository: file://../oai-nrf
+      version: v2.2
+    - condition: oai-udr.enabled
+      name: oai-udr
+      repository: file://../oai-udr
+      version: v2.2
+    - condition: oai-udm.enabled
+      name: oai-udm
+      repository: file://../oai-udm
+      version: v2.2
+    - condition: oai-ausf.enabled
+      name: oai-ausf
+      repository: file://../oai-ausf
+      version: v2.2
+    - condition: oai-amf.enabled
+      name: oai-amf
+      repository: file://../oai-amf
+      version: v2.2
+    - condition: oai-smf.enabled
+      name: oai-smf
+      repository: file://../oai-smf
+      version: v2.2
+    - condition: oai-upf.enabled
+      name: oai-upf
+      repository: file://../oai-upf
+      version: v2.2
+    - condition: oai-lmf.enabled
+      name: oai-lmf
+      repository: file://../oai-lmf
+      version: v2.2
+    - condition: oai-traffic-server.enabled
+      name: oai-traffic-server
+      repository: file://../oai-traffic-server
+      version: v2.2
+    - condition: ims.enabled
+      name: ims
+      repository: file://../ims
+      version: 20.6.0
+    description: OAI 5G Release 16 Core Network
+    digest: a3b6d29e58b50a8228d168343e7eb649013e84c1bfa0b53b0c508acecc7f7ace
+    icon: http://www.openairinterface.org/wp-content/uploads/2015/06/cropped-oai_final_logo.png
+    keywords:
+    - 5GCN
+    - AMF
+    - SMF
+    - NRF
+    - UPF
+    - UDM
+    - UDR
+    - AUSF
+    - Traffic_server
+    - Asterisk
+    maintainers:
+    - email: oaicicdteam@openairinterface.org
+      name: OPENAIRINTERFACE
+    name: oai-5g-core
+    type: application
+    urls:
+    - oai-5g-core-v2.2.0.tgz
+    version: v2.2.0
   packetrusher:
   - apiVersion: v2
     appVersion: v4.2.0
-    created: "2026-04-22T13:30:39.903655+02:00"
+    created: "2026-04-30T13:35:19.042627+02:00"
     description: A Helm chart to deploy the Packet Rusher
     digest: f09acb60fff9bd4c184c0783fdf84f7db1b2df46f43ddfee3904223d6a59fe39
     icon: https://camo.githubusercontent.com/915dcf8299b3d2bfe2b2693c5401916cb31e31fb690a73e7da327808000efa37/68747470733a2f2f666f72756d2e667265653567632e6f72672f75706c6f6164732f64656661756c742f6f726967696e616c2f31582f333234363935626663363438316264353536633131303138663238333430383663663565633634352e706e67
@@ -119,12 +190,12 @@ entries:
     name: packetrusher
     type: application
     urls:
-    - https://alesan121.github.io/free5gc-helm-repo/packetrusher-4.2.0.tgz
+    - packetrusher-4.2.0.tgz
     version: 4.2.0
   ueransim:
   - apiVersion: v2
     appVersion: v4.2.0
-    created: "2026-04-22T13:30:39.904028+02:00"
+    created: "2026-04-30T13:35:19.04348+02:00"
     description: A Helm chart to deploy UERANSIM
     digest: c275a7c8b95866cffc23e85e4dd253cd7b963bb01ea95d7cbb248b72582382e7
     icon: https://raw.githubusercontent.com/aligungr/UERANSIM/master/.github/logo.png
@@ -133,6 +204,6 @@ entries:
       name: Abderaouf KHICHANE
     name: ueransim
     urls:
-    - https://alesan121.github.io/free5gc-helm-repo/ueransim-4.2.0.tgz
+    - ueransim-4.2.0.tgz
     version: 4.2.0
-generated: "2026-04-22T13:30:39.881205+02:00"
+generated: "2026-04-30T13:35:19.011233+02:00"
