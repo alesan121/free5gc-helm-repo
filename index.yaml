@@ -1,57 +1,72 @@
 apiVersion: v1
 entries:
-  free5gc:
+  free5gc-core:
   - apiVersion: v2
-    appVersion: v4.2.0
-    created: "2026-04-30T13:35:19.035993+02:00"
+    appVersion: v4.2.2
+    created: "2026-05-07T00:40:11.628123+02:00"
     dependencies:
     - condition: deployMongoDb
       name: mongodb
-      repository: ""
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 15.6.0
     - condition: deployAmf
       name: free5gc-amf
-      repository: ""
+      repository: file://./charts/free5gc-amf
+      version: 0.2.7
     - condition: deployAusf
       name: free5gc-ausf
-      repository: ""
+      repository: file://./charts/free5gc-ausf
+      version: 0.2.7
     - condition: deployChf
       name: free5gc-chf
-      repository: ""
+      repository: file://./charts/free5gc-chf
+      version: 0.1.0
     - condition: deployN3iwf
       name: free5gc-n3iwf
-      repository: ""
+      repository: file://./charts/free5gc-n3iwf
+      version: 0.2.5
     - condition: deployNef
       name: free5gc-nef
-      repository: ""
+      repository: file://./charts/free5gc-nef
+      version: 0.1.0
     - condition: deployNrf
       name: free5gc-nrf
-      repository: ""
+      repository: file://./charts/free5gc-nrf
+      version: 0.2.7
     - condition: deployNssf
       name: free5gc-nssf
-      repository: ""
+      repository: file://./charts/free5gc-nssf
+      version: 0.2.7
     - condition: deployPcf
       name: free5gc-pcf
-      repository: ""
+      repository: file://./charts/free5gc-pcf
+      version: 0.2.7
     - condition: deploySmf
       name: free5gc-smf
-      repository: ""
+      repository: file://./charts/free5gc-smf
+      version: 0.2.7
     - condition: deployUdm
       name: free5gc-udm
-      repository: ""
+      repository: file://./charts/free5gc-udm
+      version: 0.2.7
     - condition: deployUdr
       name: free5gc-udr
-      repository: ""
+      repository: file://./charts/free5gc-udr
+      version: 0.2.7
     - condition: deployUpf
       name: free5gc-upf
-      repository: ""
+      repository: file://./charts/free5gc-upf
+      version: 0.2.6
     - condition: deployWebui
       name: free5gc-webui
-      repository: ""
+      repository: file://./charts/free5gc-webui
+      version: 0.1.5
     - condition: deployDbPython
       name: free5gc-dbpython
-      repository: ""
-    description: A Helm chart to deploy Free5gc
-    digest: 91d1e867ddfabe3ea0cc0868dbb9fd2f918e7621ed6fb39a13a51e4d5b993c98
+      repository: file://./charts/free5gc-dbpython
+      version: 0.1.0
+    description: A Helm chart to deploy the Free5gc core components
+    digest: c989476ad520a803cbe9edb48e88483d4cfa9e4070883c24ae9737875165c2d9
     icon: https://camo.githubusercontent.com/915dcf8299b3d2bfe2b2693c5401916cb31e31fb690a73e7da327808000efa37/68747470733a2f2f666f72756d2e667265653567632e6f72672f75706c6f6164732f64656661756c742f6f726967696e616c2f31582f333234363935626663363438316264353536633131303138663238333430383663663565633634352e706e67
     maintainers:
     - email: abderaouf.khichane@orange.com
@@ -60,56 +75,107 @@ entries:
       name: Ilhem FAJJARI
     - email: ayoub.bousselmi@orange.com
       name: Ayoub BOUSSELMI
-    name: free5gc
+    name: free5gc-core
     urls:
-    - free5gc-4.2.0.tgz
-    version: 4.2.0
-  free5gc-upf:
+    - free5gc-core-v4.2.2.tgz
+    version: v4.2.2
+  free5gc-single-upf:
   - apiVersion: v2
-    appVersion: v4.2.0
-    created: "2026-04-30T13:35:19.037194+02:00"
-    description: A Helm chart to deploy Free5GC UPF (User Plane Function) standalone
-    digest: be14114961a59d2fc55e3f9363b93acdabaaa4d64fb0736f7b5b252e21174a41
-    keywords:
-    - free5gc
-    - 5g
-    - uPF
-    - user plane
+    appVersion: v4.2.2
+    created: "2026-05-07T00:40:11.67052+02:00"
+    dependencies:
+    - condition: deployMongoDb
+      name: mongodb
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 15.6.0
+    - condition: deployAmf
+      name: free5gc-amf
+      repository: file://./charts/free5gc-amf
+      version: 0.2.7
+    - condition: deployAusf
+      name: free5gc-ausf
+      repository: file://./charts/free5gc-ausf
+      version: 0.2.7
+    - condition: deployChf
+      name: free5gc-chf
+      repository: file://./charts/free5gc-chf
+      version: 0.1.0
+    - condition: deployN3iwf
+      name: free5gc-n3iwf
+      repository: file://./charts/free5gc-n3iwf
+      version: 0.2.5
+    - condition: deployNef
+      name: free5gc-nef
+      repository: file://./charts/free5gc-nef
+      version: 0.1.0
+    - condition: deployNrf
+      name: free5gc-nrf
+      repository: file://./charts/free5gc-nrf
+      version: 0.2.7
+    - condition: deployNssf
+      name: free5gc-nssf
+      repository: file://./charts/free5gc-nssf
+      version: 0.2.7
+    - condition: deployPcf
+      name: free5gc-pcf
+      repository: file://./charts/free5gc-pcf
+      version: 0.2.7
+    - condition: deploySmf
+      name: free5gc-smf
+      repository: file://./charts/free5gc-smf
+      version: 0.2.7
+    - condition: deployUdm
+      name: free5gc-udm
+      repository: file://./charts/free5gc-udm
+      version: 0.2.7
+    - condition: deployUdr
+      name: free5gc-udr
+      repository: file://./charts/free5gc-udr
+      version: 0.2.7
+    - condition: deployUpf
+      name: free5gc-upf
+      repository: file://./charts/free5gc-upf
+      version: 0.2.6
+    - condition: deployWebui
+      name: free5gc-webui
+      repository: file://./charts/free5gc-webui
+      version: 0.1.5
+    - condition: deployDbPython
+      name: free5gc-dbpython
+      repository: file://./charts/free5gc-dbpython
+      version: 0.1.0
+    description: A Helm chart to deploy the Free5gc core components
+    digest: 0bffd0fe4e172d56b6d2a6fbca15d7b673f29dbfef3df8a5a4d0074a0f9e9bab
+    icon: https://camo.githubusercontent.com/915dcf8299b3d2bfe2b2693c5401916cb31e31fb690a73e7da327808000efa37/68747470733a2f2f666f72756d2e667265653567632e6f72672f75706c6f6164732f64656661756c742f6f726967696e616c2f31582f333234363935626663363438316264353536633131303138663238333430383663663565633634352e706e67
     maintainers:
-    - email: OSMSupport@etsi.org
-      name: OSM
-    name: free5gc-upf
+    - email: abderaouf.khichane@orange.com
+      name: Abderaouf KHICHANE
+    - email: ilhem.fajjari@orange.com
+      name: Ilhem FAJJARI
+    - email: ayoub.bousselmi@orange.com
+      name: Ayoub BOUSSELMI
+    name: free5gc-single-upf
     urls:
-    - free5gc-upf-4.2.0.tgz
-    version: 4.2.0
-  loxilb:
+    - free5gc-single-upf-v4.2.2.tgz
+    version: v4.2.2
+  free5gc-ueransim:
   - apiVersion: v2
-    appVersion: v4.2.0
-    created: "2026-04-30T13:35:19.037802+02:00"
-    description: A Helm chart for LoxiLB - an open-source, eBPF-based load balancer
-      for NGAP Layer 7 load balancing within 5G networks
-    digest: bbe22b16845ca09241997693baf1374492de9ca8179ca63d301207d292d1a53b
-    home: https://github.com/loxilb-io/loxilb
-    keywords:
-    - loxilb
-    - loadbalancer
-    - 5g
-    - ngap
-    - ebpf
+    appVersion: v4.0.1
+    created: "2026-05-07T00:40:11.671119+02:00"
+    description: A Helm chart to deploy the Free5GC UERANSIM
+    digest: 25ea147820d2b59c2e0875456578c38301f0094ea4133beb0dd2f6946d214b65
+    icon: https://raw.githubusercontent.com/aligungr/UERANSIM/master/.github/logo.png
     maintainers:
-    - email: wlin.cs13@nycu.edu.tw
-      name: William Lin
-    name: loxilb
-    sources:
-    - https://github.com/loxilb-io/loxilb
-    type: application
+    - email: abderaouf.khichane@orange.com
+      name: Abderaouf KHICHANE
+    name: free5gc-ueransim
     urls:
-    - loxilb-4.2.0.tgz
-    version: 4.2.0
+    - free5gc-ueransim-v2.0.17.tgz
+    version: v2.0.17
   oai-5g-core:
   - apiVersion: v2
     appVersion: v2.2.1
-    created: "2026-04-30T13:35:19.042083+02:00"
+    created: "2026-05-07T00:40:11.674479+02:00"
     dependencies:
     - condition: mysql.enabled
       name: mysql
@@ -118,45 +184,45 @@ entries:
     - condition: oai-nrf.enabled
       name: oai-nrf
       repository: file://../oai-nrf
-      version: v2.2
+      version: v2.2.0
     - condition: oai-udr.enabled
       name: oai-udr
       repository: file://../oai-udr
-      version: v2.2
+      version: v2.2.0
     - condition: oai-udm.enabled
       name: oai-udm
       repository: file://../oai-udm
-      version: v2.2
+      version: v2.2.0
     - condition: oai-ausf.enabled
       name: oai-ausf
       repository: file://../oai-ausf
-      version: v2.2
+      version: v2.2.0
     - condition: oai-amf.enabled
       name: oai-amf
       repository: file://../oai-amf
-      version: v2.2
+      version: v2.2.0
     - condition: oai-smf.enabled
       name: oai-smf
       repository: file://../oai-smf
-      version: v2.2
+      version: v2.2.0
     - condition: oai-upf.enabled
       name: oai-upf
       repository: file://../oai-upf
-      version: v2.2
+      version: v2.2.0
     - condition: oai-lmf.enabled
       name: oai-lmf
       repository: file://../oai-lmf
-      version: v2.2
+      version: v2.2.0
     - condition: oai-traffic-server.enabled
       name: oai-traffic-server
       repository: file://../oai-traffic-server
-      version: v2.2
+      version: v2.2.0
     - condition: ims.enabled
       name: ims
       repository: file://../ims
       version: 20.6.0
     description: OAI 5G Release 16 Core Network
-    digest: a3b6d29e58b50a8228d168343e7eb649013e84c1bfa0b53b0c508acecc7f7ace
+    digest: 98183c6a59558b612e98d17bb44a45bdf6142858b70a805f065079e3eea32cf1
     icon: http://www.openairinterface.org/wp-content/uploads/2015/06/cropped-oai_final_logo.png
     keywords:
     - 5GCN
@@ -175,35 +241,53 @@ entries:
     name: oai-5g-core
     type: application
     urls:
-    - https://alesan121.github.io/free5gc-helm-repo/oai-5g-core-v2.2.0.tgz
+    - oai-5g-core-v2.2.0.tgz
     version: v2.2.0
-  packetrusher:
+  oai-5g-gnb:
   - apiVersion: v2
-    appVersion: v4.2.0
-    created: "2026-04-30T13:35:19.042627+02:00"
-    description: A Helm chart to deploy the Packet Rusher
-    digest: f09acb60fff9bd4c184c0783fdf84f7db1b2df46f43ddfee3904223d6a59fe39
-    icon: https://camo.githubusercontent.com/915dcf8299b3d2bfe2b2693c5401916cb31e31fb690a73e7da327808000efa37/68747470733a2f2f666f72756d2e667265653567632e6f72672f75706c6f6164732f64656661756c742f6f726967696e616c2f31582f333234363935626663363438316264353536633131303138663238333430383663663565633634352e706e67
+    appVersion: 2026.w15
+    created: "2026-05-07T00:40:11.675085+02:00"
+    description: A Helm chart for gNB network function
+    digest: b96d658f1ac3e8d805824e4c2eea71e45b23033dd859c5f8d1dbb1e0ac9f2ea8
+    icon: http://www.openairinterface.org/wp-content/uploads/2015/06/cropped-oai_final_logo.png
+    keywords:
+    - RFSimulator
+    - gNB
+    - RAN
+    - 5G
+    - USRP_B2XX
+    - USRP_N3XX
     maintainers:
-    - email: ny40ny40ny.cs11@nycu.edu.tw
-      name: Brian Chen
-    name: packetrusher
+    - email: oaicicdteam@openairinterface.org
+      name: OPENAIRINTERFACE
+    name: oai-5g-gnb
+    sources:
+    - https://gitlab.eurecom.fr/oai/openairinterface5g
     type: application
     urls:
-    - packetrusher-4.2.0.tgz
-    version: 4.2.0
-  ueransim:
+    - oai-5g-gnb-v2.4.0.tgz
+    version: v2.4.0
+  oai-5g-nr-ue:
   - apiVersion: v2
-    appVersion: v4.2.0
-    created: "2026-04-30T13:35:19.04348+02:00"
-    description: A Helm chart to deploy UERANSIM
-    digest: c275a7c8b95866cffc23e85e4dd253cd7b963bb01ea95d7cbb248b72582382e7
-    icon: https://raw.githubusercontent.com/aligungr/UERANSIM/master/.github/logo.png
+    appVersion: 2026.w15
+    created: "2026-05-07T00:40:11.675492+02:00"
+    description: A Helm chart for nr-ue network function
+    digest: f674b9caa8f893b1019f6d21ece27aaa5e8799a7d8f7cca65e88cc725c989764
+    icon: http://www.openairinterface.org/wp-content/uploads/2015/06/cropped-oai_final_logo.png
+    keywords:
+    - RF_Simulator
+    - NR-UE
+    - RAN
+    - 5G
+    - USRP
     maintainers:
-    - email: abderaouf.khichane@orange.com
-      name: Abderaouf KHICHANE
-    name: ueransim
+    - email: oaicicdteam@openairinterface.org
+      name: OPENAIRINTERFACE
+    name: oai-5g-nr-ue
+    sources:
+    - https://gitlab.eurecom.fr/oai/openairinterface5g
+    type: application
     urls:
-    - ueransim-4.2.0.tgz
-    version: 4.2.0
-generated: "2026-04-30T13:35:19.011233+02:00"
+    - oai-5g-nr-ue-v2.4.0.tgz
+    version: v2.4.0
+generated: "2026-05-07T00:40:11.57895+02:00"
