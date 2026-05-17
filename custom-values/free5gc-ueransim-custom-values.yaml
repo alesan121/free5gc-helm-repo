@@ -1,0 +1,126 @@
+global:
+  free5gcReleaseName: oai-5g-core
+  gnb:
+    amfNodePort: true
+    multus:
+      enabled: false
+gnb:
+  enabled: true
+  name: gnb
+  replicaCount: 1
+  image:
+    name: free5gc/ueransim
+    tag: v4.0.1
+    pullPolicy: IfNotPresent
+  configmap:
+    name: gnb-configmap
+  volume:
+    name: gnb-volume
+    mount: /ueransim/config
+  service:
+    name: gnb-service
+    type: ClusterIP
+    port: 4997
+    protocol: UDP
+  hostNetwork: true
+  n2if:
+    ipAddress: 10.100.50.250
+  n3if:
+    ipAddress: 10.100.50.236
+  amf:
+    n2if:
+      ipAddress: 10.95.134.142
+      serviceName: "oai-amf"
+      port: 30412
+    service:
+      ngap:
+        enabled: false
+  resources:
+    requests:
+      cpu: 100m
+      memory: 256Mi
+  configuration: |-
+    mcc: '001'
+    mnc: '01'
+    nci: '0x000000010'
+    idLength: 32
+    tac: 1
+    slices:
+      - sst: 0x1
+        sd: 0xffffff
+    ignoreStreamIds: true
+ue:
+  enabled: true
+  name: ue
+  replicaCount: 1
+  image:
+    name: free5gc/ueransim
+    tag: v4.0.1
+    pullPolicy: IfNotPresent
+  configmap:
+    name: ue-configmap
+  volume:
+    name: ue-volume
+    mount: /ueransim/config
+  command: "./nr-ue -c ./config/ue-config.yaml"
+  securityContext:
+    capabilities:
+      add: ["NET_ADMIN"]
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+  configuration: |-
+    supi: imsi-001010000000100
+    mcc: "001"
+    mnc: "01"
+    key: "fec86ba6eb707ed08905757b1bb44b8f"
+    op: "C42449363BBAD02B66D16BC975D77CC1"
+    opType: "OPC"
+    amf: 8000
+    imei: "356938035643803"
+    imeiSv: "4370816125816151"
+    uacAic:
+      mps: false
+      mcs: false
+    uacAcc:
+      normalClass: 0
+      class11: false
+      class12: false
+      class13: false
+      class14: false
+      class15: false
+    sessions:
+      - type: "IPv4"
+        apn: "internet"
+        slice:
+          sst: 0x01
+          sd: 0xffffff
+    configured-nssai:
+      - sst: 0x01
+        sd: 0xffffff
+    # Default Configured NSSAI for this UE
+    default-nssai:
+      - sst: 0x01
+        sd: 0xffffff
+    integrity:
+      IA1: true
+      IA2: true
+      IA3: true
+    ciphering:
+      EA1: true
+      EA2: true
+      EA3: true
+    integrityMaxRate:
+      uplink: "full"
+      downlink: "full"
+  test:
+    connectivity:
+      name: ue-connectivity-test
+      image: bitnami/kubectl:1.22.0
+      configmap:
+        name: connectivity-test-configmap
+      volume:
+        name: connectivity-test-volume
+        mount: /scripts
+      ttlseconds: 50
