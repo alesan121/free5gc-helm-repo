@@ -3,7 +3,7 @@ entries:
   free5gc-core:
   - apiVersion: v2
     appVersion: v4.2.2
-    created: "2026-05-11T15:51:47.183907+02:00"
+    created: "2026-05-17T22:54:02.3399+02:00"
     dependencies:
     - condition: deployMongoDb
       name: mongodb
@@ -82,7 +82,7 @@ entries:
   free5gc-single-upf:
   - apiVersion: v2
     appVersion: v4.2.2
-    created: "2026-05-11T15:51:47.22676+02:00"
+    created: "2026-05-17T22:54:02.383709+02:00"
     dependencies:
     - condition: deployMongoDb
       name: mongodb
@@ -161,9 +161,9 @@ entries:
   free5gc-ueransim:
   - apiVersion: v2
     appVersion: v4.0.1
-    created: "2026-05-11T15:51:47.227373+02:00"
+    created: "2026-05-17T22:54:02.384294+02:00"
     description: A Helm chart to deploy the Free5GC UERANSIM
-    digest: 25ea147820d2b59c2e0875456578c38301f0094ea4133beb0dd2f6946d214b65
+    digest: 7f163bf99314f9cbaa4d614c63f950ac70eaa4b7f6de2f9d3b32b4f6472117c5
     icon: https://raw.githubusercontent.com/aligungr/UERANSIM/master/.github/logo.png
     maintainers:
     - email: abderaouf.khichane@orange.com
@@ -175,7 +175,7 @@ entries:
   oai-5g-core:
   - apiVersion: v2
     appVersion: v2.2.1
-    created: "2026-05-11T15:51:47.230907+02:00"
+    created: "2026-05-17T22:54:02.388627+02:00"
     dependencies:
     - condition: mysql.enabled
       name: mysql
@@ -222,7 +222,7 @@ entries:
       repository: file://../ims
       version: 20.6.0
     description: OAI 5G Release 16 Core Network
-    digest: 3688f3b308d85bf89a8f5bf1c88b917d16ddbcc32afa7dee17e41ffa887dfd1e
+    digest: 7a8df7801b21690083fb3fa3d020293a7d9d4bddb79b02851856e72894510366
     icon: http://www.openairinterface.org/wp-content/uploads/2015/06/cropped-oai_final_logo.png
     keywords:
     - 5GCN
@@ -246,7 +246,7 @@ entries:
   oai-5g-gnb:
   - apiVersion: v2
     appVersion: 2026.w15
-    created: "2026-05-11T15:51:47.231539+02:00"
+    created: "2026-05-17T22:54:02.389245+02:00"
     description: A Helm chart for gNB network function
     digest: b96d658f1ac3e8d805824e4c2eea71e45b23033dd859c5f8d1dbb1e0ac9f2ea8
     icon: http://www.openairinterface.org/wp-content/uploads/2015/06/cropped-oai_final_logo.png
@@ -270,7 +270,7 @@ entries:
   oai-5g-nr-ue:
   - apiVersion: v2
     appVersion: 2026.w15
-    created: "2026-05-11T15:51:47.231995+02:00"
+    created: "2026-05-17T22:54:02.389786+02:00"
     description: A Helm chart for nr-ue network function
     digest: f674b9caa8f893b1019f6d21ece27aaa5e8799a7d8f7cca65e88cc725c989764
     icon: http://www.openairinterface.org/wp-content/uploads/2015/06/cropped-oai_final_logo.png
@@ -290,4 +290,4 @@ entries:
     urls:
     - oai-5g-nr-ue-v2.4.0.tgz
     version: v2.4.0
-generated: "2026-05-11T15:51:47.135983+02:00"
+generated: "2026-05-17T22:54:02.29213+02:00"
