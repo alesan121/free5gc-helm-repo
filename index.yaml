@@ -172,6 +172,17 @@ entries:
     urls:
     - free5gc-ueransim-v2.0.17.tgz
     version: v2.0.17
+  mobsim:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-05-19T11:51:35.732027+02:00"
+    description: 'Helm chart for MobSim 5G simulator (gNBs, UE, simulator engine) '
+    digest: a20e264e55a26ef8327f8523c92b3093646c2fdc015cd50032b0990dfadfd7d2
+    name: mobsim
+    type: application
+    urls:
+    - https://alesan121.github.io/free5gc-helm-repo/mobsim-0.1.1.tgz
+    version: 0.1.1
   oai-5g-core:
   - apiVersion: v2
     appVersion: v2.2.1
@@ -290,4 +301,4 @@ entries:
     urls:
     - oai-5g-nr-ue-v2.4.0.tgz
     version: v2.4.0
-generated: "2026-05-17T22:54:02.29213+02:00"
+generated: "2026-05-19T11:51:35.729799+02:00"
