@@ -27,8 +27,8 @@ oai-nrf:
 oai-lmf:
   enabled: true
   nfimage:
-    repository: docker.io/oaisoftwarealliance/oai-lmf
-    version: v2.2.1
+    repository: docker.io/frnetsoft/oai-lmf
+    version: develop
     pullPolicy: IfNotPresent
   start:
     lmf: true
@@ -63,8 +63,8 @@ oai-ausf:
 oai-amf:
   enabled: true
   nfimage:
-    repository: docker.io/oaisoftwarealliance/oai-amf
-    version: v2.2.1
+    repository: docker.io/frnetsoft/oai-amf
+    version: develop
     pullPolicy: IfNotPresent
   start:
     amf: true
