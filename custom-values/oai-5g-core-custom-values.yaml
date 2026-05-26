@@ -76,6 +76,7 @@ oai-amf:
   exposedPorts:
     nodePorts:
       sctp: 30412
+      sbi: 32522
 oai-upf:
   enabled: true
   hostNetwork: true
@@ -121,6 +122,11 @@ oai-smf:
     tcpdump: false
   multus:
     enabled: false
+  service:
+    type: NodePort
+  exposedPorts:
+    nodePorts:
+      sbi: 32046
 ims:
   enabled: true
   imsUsers:
