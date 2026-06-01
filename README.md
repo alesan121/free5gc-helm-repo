@@ -3,7 +3,7 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/NTT-Data-Logo.svg/3840px-NTT-Data-Logo.svg.png" alt="NTT DATA" width="280"/>
   </a>
 
-  <h1>Private 5G Helm Chart Repository</h1>
+  <h1>Public 5G Helm Chart Repository</h1>
 
   <p>
     Custom Helm Charts maintained by <strong>NTT DATA</strong> to showcase the capabilities of
