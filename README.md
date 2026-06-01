@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://www.nttdata.com" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/NTT-Data-Logo.svg" alt="NTT DATA" width="280"/>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/NTT-Data-Logo.svg/3840px-NTT-Data-Logo.svg.png" alt="NTT DATA" width="280"/>
   </a>
 
   <h1>Private 5G Helm Chart Repository</h1>
@@ -139,7 +139,7 @@ This repository is maintained by the **NTT DATA** team. For questions or contrib
 
 <div align="center">
   <a href="https://www.nttdata.com" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/NTT-Data-Logo.svg" alt="NTT DATA" width="200"/>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/NTT-Data-Logo.svg/3840px-NTT-Data-Logo.svg.png" alt="NTT DATA" width="200"/>
   </a>
   <br/>
   <sub>© NTT DATA — Making the world more sustainable and secure through innovation</sub>
